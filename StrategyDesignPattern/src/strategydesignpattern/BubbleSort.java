@@ -12,7 +12,8 @@ package strategydesignpattern;
 public class BubbleSort implements Sort {
     
          public int[] sort(int[] arr){
-         
+             
+         System.out.println("Sorting the array with BubbleSort Algorithm");
          int temp;
          
          for(int i=0;i<arr.length;i++){

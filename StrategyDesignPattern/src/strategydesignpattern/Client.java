@@ -15,13 +15,12 @@ public class Client {
     
     public static void main(String[] args){
         
-        Sort bubblesort = new BubbleSort();
-        Sort quicksort = new QuickSort();
+        Context c = new Context(new BubbleSort());
+        int[] arr = c.performSort(new int[] {16,7,88,1,2,55});
+        System.out.println(Arrays.toString(arr));
         
-       int[] arr =  bubblesort.sort(new int[] {16,7,88,1,2,55});
-       int[] arr2 =  quicksort.sort(new int[] {16,7,88,1,2,55});
-       
-       System.out.println(Arrays.toString(arr));
+        Context c2 = new Context(new QuickSort());
+        int[] arr2 = c2.performSort(new int[] {16,7,88,1,2,55});
        System.out.println(Arrays.toString(arr2));
     }
     

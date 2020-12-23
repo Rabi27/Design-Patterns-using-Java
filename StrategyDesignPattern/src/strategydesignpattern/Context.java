@@ -9,13 +9,18 @@ package strategydesignpattern;
  *
  * @author Rabi Siddique
  */
-public class MergeSort implements Sort {
+public class Context {
     
-    public int[] sort(int[] arr){
+    private final Sort s;
+
+    public Context(Sort s) {
+        this.s = s;
+    }
+    
+    public int[] performSort(int[] arr){
         
-        System.out.println("Sorting the array with MergeSort Algorithm");
-        
-        return arr;
+         arr = s.sort(arr);
+         return arr;
     
     }
     

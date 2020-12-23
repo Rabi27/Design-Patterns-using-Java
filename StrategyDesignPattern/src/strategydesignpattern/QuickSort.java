@@ -14,6 +14,8 @@ public class QuickSort implements Sort {
     
     public int[] sort(int[] arr){
         
+        System.out.println("Sorting the array with QuickSort Algorithm");
+        
         sorting(arr,0,arr.length-1);
         
         return arr;
